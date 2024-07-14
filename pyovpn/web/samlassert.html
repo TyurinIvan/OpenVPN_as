@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:t="http://twistedmatrix.com/ns/twisted.web.template/0.1">
+    <head>
+        <!-- CSS -->
+        <link href="all.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="load-fonts.css" rel="stylesheet" type="text/css" />
+        <link href="common.css" rel="stylesheet" type="text/css" />
+
+        <!-- Javascript -->
+        <script type="text/javascript" src="jquery.min.js" ></script>
+        <script type="text/javascript" src="popper.min.js"></script>
+        <script type="text/javascript" src="bootstrap.min.js"></script>
+        <script type="text/javascript">
+         function closeWindow()
+         {
+             window.open('', '_parent', '');
+             window.close();
+         }
+
+         window.onload = function ()
+         {
+             setTimeout(closeWindow, 5000);
+         }
+        </script>
+    </head>
+    <body>
+        <div class="container fill-height">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div id="page-center" class="openvpn-blue-font col-lg-10">
+                    <img src="logo-no-text.png"></img>
+                    <br></br>
+                    <h2 class="text-center">
+                        SAML authentication assertion received
+                    </h2>
+                    <br></br>
+                    <h3>This window is set to close automatically in 5s ...</h3>
+                    <h3>It is also safe to close it manually.</h3>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+    </body>
+</html>

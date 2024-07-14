@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:t="http://twistedmatrix.com/ns/twisted.web.template/0.1">
+    <body>
+        <!-- Modal -->
+        <div class="modal fade" id="tokenurlModal" tabindex="-1" role="dialog" aria-labelledby="tokenurlModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tokenurlModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <input type="hidden" id="tokenurl_username" value="" />
+                    <div class="modal-body">
+                        <div class="radio">
+                            <input type="radio"
+                                   id="tokenurl-type-userlocked"
+                                   name="tokenurl-type" value="userlocked"
+                                   checked="checked" />
+                            <label for="tokenurl-type-userlocked">
+                                User-Locked
+                            </label>
+                            <input type="radio"
+                                   id="tokenurl-type-autologin"
+                                   name="tokenurl-type" value="autologin"
+                                   class="ml-4" />
+                            <label for="tokenurl-type-autologin">
+                                Autologin
+                            </label>
+                        </div>
+
+                        <div class="pt-3">
+                            <label>Validity in Hours</label>
+                            <input type="text"
+                                   id="profile-expiry"
+                                   name="expiry"
+                                   value="1"
+                                   class="form-control" />
+                        </div>
+                    </div>
+                    <div id="tokenUrlResult" class="row">
+                        <div class="col-10 pb-3">
+                            <input class="form-control pl-2 pr-2" type="text" value="" id="profileTokenUrl" readonly="readonly" style="overflow: hidden"/>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-secondary" onclick="copyTokenUrlToClipboard()">Copy</button>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <button name="button" type="button"
+                                class="btn btn-block btn-outline-success"
+                                id="createToken"
+                        onclick="createNewTokenURL();">
+                            <i class="fal fa-plus-circle">
+                            </i> Create Token Download URL
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

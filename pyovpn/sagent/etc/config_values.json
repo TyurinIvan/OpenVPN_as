@@ -1,0 +1,1214 @@
+{
+   "run_api.active_profile": {
+      "2.9.0":  {
+         "value": "Default",
+         "description": "Current profile set."
+      }
+   },
+   "webui.edit_profile": {
+      "2.9.0":  {
+         "value": "Default",
+         "description": "Web UI Profile, that point to the appropriate configuration settings."
+      }
+   },
+   "admin_ui.https.ip_address":{
+      "2.9.0":  {
+         "value": "all",
+         "description": "IP address for admin UI web server."
+      }
+   },
+   "admin_ui.https.port":{
+      "2.9.0":  {
+         "value": "943",
+         "description": "Port for admin UI web server"
+      }
+   },
+   "auth.ldap.0.name":{
+      "2.9.0":  {
+         "value": "My LDAP servers",
+         "description": "Name for LDAP configuration."
+      }
+   },
+   "auth.ldap.0.ssl_verify":{
+      "2.9.0":  {
+         "value": "internal",
+         "description": "Indicate how to verify the SSL certificate when connecting to the LDAP server. Can be one of the following: ('never', 'allow', 'demand' or 'internal')."
+      }
+   },
+   "auth.ldap.0.timeout":{
+      "2.9.0":  {
+         "value": "4",
+         "description": "Primary LDAP server timeout in number of seconds to wait before switching to backup LDAP server."
+      }
+   },
+   "auth.ldap.0.use_ssl":{
+      "2.9.0":  {
+         "value": "never",
+         "description": "If to use SSL over the connection to the LDAP server or not. Can be one of the following: ('never', 'adaptive', 'always')."
+      }
+   },
+   "auth.ldap.0.user_exists_check":{
+      "2.9.0": "false",
+      "2.12.0": "true",
+      "description": "Flag that indicates whether user exist check should be performed in case of autologin configuration."
+   },
+   "auth.module.type":{
+      "2.9.0":{
+         "value":"local",
+         "description":"Local as the simplest method for authentication"
+      }
+   },
+   "auth.local.0.enable":{
+      "2.9.0":{
+         "value":"true",
+         "description":"Whether to enable authentication via local method in the DB."
+      }
+   },
+   "auth.pam.0.service":{
+      "2.9.0":{
+         "value":"openvpnas",
+         "description":"Default user name in OS for running service"
+      }
+   },
+   "auth.pam.0.enable":{
+      "2.9.0":{
+         "value":"true",
+         "description":"If true, then PAM authentication is enabled."
+      }
+   },
+   "auth.local.0.prefer_scrypt":{
+      "2.9.0": {
+         "value": "False",
+         "description": "Prefer generating password hashes for local user with SCrypt instead of PBKDF2HMAC.\nSCrypt is generally a newer and better password hash but has limited compatibility as it is not available with older SSL libraries or in system environments that have a restricted cryptography algorithms.\nCurrently Scrypt is only available for OpenSSL 1.1.0 or later and if the system not running in FIPS mode"
+      }
+   },
+   "auth.radius.0.acct_enable":{
+      "2.9.0":  {
+         "value": "false",
+         "description": "If true, enable RADIUS Accounting reports."
+      }
+   },
+   "auth.radius.0.name":{
+      "2.9.0":  {
+         "value": "My Radius servers",
+         "description": "Radius name for specific configuration"
+      }
+   },
+   "cs.cws.pwd_strength":{
+      "2.9.0":  {
+         "value": "true",
+         "description": "If true then check for password strength will be performed."
+      }
+   },
+   "cs.cws_proto_v2":{
+      "2.9.0":"False",
+      "2.10.0":"True",
+      "description": ["Specifies minimum version for CWS protocol. If True then minimum version is set to 2 and all the requests with *x-cws-proto-ver* header set to 1 will fail.",
+      "If False then requests with  *x-cws-proto-ver* header set to 1 will work fine."]
+   },
+   "cs.https.ip_address":{
+      "2.9.0":"all",
+      "description": "IP address for client UI web server."
+   },
+   "cs.https.port":{
+      "2.9.0":"943",
+      "description": "Port for client UI web server."
+   },
+   "cs.prof_sign_web":{
+      "2.9.0":"true",
+      "description": "This value is used to support backward compatibility with previous profile signing workflow. If disabled along with external_pki option, profile will be signed with OpenVPN private key."
+   },
+   "cs.tls_version_min":{
+      "2.9.0":"1.2",
+      "description": "Minimum TLS version for client web UI"
+   },
+   "cs.generic_all_users":{
+      "2.9.0":"True",
+      "description": "If true server-locked configurations should be shown to all users."
+   },
+   "cs.userlocked_all_users":{
+      "2.9.0":"True",
+      "description": "IF True userlocked client configurations should be visible in the CWS."
+   },
+   "cs.admin_only":{
+      "2.9.0":"False",
+      "description": "Should we restrict Client Web Server access to Access Server administrators"
+   },
+   "sa.initial_run_groups.0":{
+      "2.9.0":"web_group",
+      "description": "A list of service groups that should be started during server agent initialization."
+   },
+   "sa.initial_run_groups.1":{
+      "2.9.0":"openvpn_group",
+      "description": "A list of service groups that should be started during server agent initialization."
+   },
+   "vpn.client.basic":{
+      "2.9.0":"false",
+      "description": "If true, UI assumes a basic layout with limited functionality. If false, UI adds additional functionality such as 'import'"
+   },
+   "vpn.client.cipher":{
+      "2.10.2":"AES-256-CBC",
+      "description": "This value is used for compatibility with older clients (2.3 and older) and will specify the data channel cipher these clients will use. vpn.server.data_cipher is used to configure modern clients and server side."
+   },
+   "vpn.client.routing.inter_client":{
+      "2.9.0":"false",
+      "description": "Enable client-to-client IPv4 traffic."
+   },
+   "vpn.client.routing.reroute_dns":{
+      "2.9.0":"true",
+      "description": "If true, clients will route DNS queries through the VPN."
+   },
+   "vpn.client.routing.reroute_gw":{
+      "2.9.0":"true",
+      "description": "If true, route all IPv4 traffic through tunnel:"
+   },
+   "vpn.daemon.0.client.netmask_bits":{
+      "2.9.0":"20",
+      "description": ["VPN IP Network prefix, address from which user's VPN client is assigned to, unless ",
+                      "a user does not have a specific VPN IP address configured from user permissions."]
+   },
+   "vpn.daemon.0.client.network":{
+      "2.9.0":"172.27.224.0",
+      "description": ["VPN IP Network address, ip address from which user's VPN client is assigned to, unless ",
+                      "a user does not have a specific VPN IP address configured from user permissions."]
+   },
+   "vpn.daemon.0.listen.ip_address":{
+      "2.9.0":"all",
+      "description": "Listen IP address for vpn daemon."
+   },
+   "vpn.daemon.0.listen.port":{
+      "2.9.0":"443",
+      "description": "Listen port for vpn daemon."
+   },
+   "vpn.daemon.0.listen.protocol":{
+      "2.9.0":"tcp",
+      "description": "Listen protocol for VPN daemon"
+   },
+   "vpn.daemon.0.server.ip_address":{
+      "2.9.0":"all",
+      "description": "IP Address that VPN will listen on"
+   },
+   "vpn.general.osi_layer":{
+      "2.9.0":"3",
+      "description": "Specifies OSI layer VPN should operate on. Allowed values(2, 3)."
+   },
+   "vpn.general.default_alt_config":{
+      "2.9.0":"Adaptive",
+      "description": "Alt config priority. Allowed values.(Adaptive, TCP, UDP)."
+   },
+   "vpn.server.cipher":{
+      "2.9.0":"BF-CBC",
+      "2.10.2":"AES-256-CBC",
+      "description": "Fallback OpenVPN server cipher for data-channel encryption if no other data ciphers available."
+   },
+   "vpn.server.daemon.enable":{
+      "2.9.0":"true",
+      "description": "IS NOT USED."
+   },
+   "vpn.server.daemon.protocols":{
+      "2.9.0":"both",
+      "description": "IS NOT USED."
+   },
+   "vpn.server.daemon.kovpn":{
+      "2.9.0":"false",
+      "description": "Indicates whether to enable DCO support."
+   },
+   "vpn.server.daemon.ovpndco":{
+      "2.9.0":"false",
+      "2.14.0": "true",
+      "description": "If true, enables Data Channel Offload (DCO)."
+   },
+   "vpn.general.mtu":{
+      "2.9.0": "1500",
+      "2.12.0": "1420",
+      "description": "Maximum transmission unit for VPN tunel. This setting will be applied on server and client profiles."
+   },
+   "vpn.server.daemon.tcp.n_daemons":{
+      "2.9.0":"1",
+      "description": "Number of daemons for TCP protocol."
+   },
+   "vpn.server.daemon.tcp.port":{
+      "2.9.0":"443",
+      "description": "Port for TCP VPN daemon."
+   },
+   "vpn.server.daemon.udp.n_daemons":{
+      "2.9.0":"1",
+      "description": "Number of daemons for UDP protocol."
+   },
+   "vpn.server.daemon.udp.port":{
+      "2.9.0":"1194",
+      "description": "Port for UDP VPN daemon."
+   },
+   "vpn.server.google_auth.enable":{
+      "2.9.0":"False",
+      "description": "Whether to enable Google Authenticator for authentication."
+   },
+   "vpn.server.google_auth.enable_autologin":{
+      "2.9.0":"False",
+      "description": "Whether to enable Google Authenticator also on autologin profiles"
+   },
+   "vpn.server.google_auth.admin_locked":{
+      "2.9.0":"False",
+      "description": "If true only AS admins can generate and view Google Authenticator secrets"
+   },
+   "vpn.server.web_sso.enable":{
+      "2.9.0":"False",
+      "description": "Indicates whether to enable Web SSO support."
+   },
+   "vpn.server.web_sso.enable_autologin":{
+      "2.9.0":"True",
+      "description": "If true also use Web SSO Authenticator on autologin profiles."
+   },
+   "vpn.server.group_pool.0":{
+      "2.9.0":"172.27.240.0/20",
+      "description": "A list of subnets that will be partitioned across groups that request it via group_pool userprop key"
+   },
+   "vpn.server.port_share.enable":{
+      "2.9.0":"true",
+      "description": "Should port sharing be allowed or not."
+   },
+   "vpn.server.port_share.service":{
+      "2.9.0":"admin+client",
+      "description": "Indicates the policy for port hsaring feature."
+   },
+   "vpn.server.routing.private_access":{
+      "2.9.0":"no",
+      "description": "Controls how private traffic should be routed. Possible values(nat, route, no)"
+   },
+   "vpn.server.routing6.private_access":{
+      "2.9.0":"no",
+      "description": "Controls how private traffic should be routed for IPv6. Possible values(nat, route, no)"
+   },
+   "vpn.server.routing.gateway_access":{
+      "2.9.0":"True",
+      "description": "If true, clients may access the server-side tun gateway IPv6 address."
+   },
+   "vpn.server.routing6.gateway_access":{
+      "2.9.0":"True",
+      "description": "If true, clients may access the server-side tun gateway IPv4 address."
+   },
+   "vpn.server.routing.allow_private_nets_to_clients":{
+      "2.9.0":"True",
+      "description": "If true, all IPv4 addresses in **vpn.server.routing.private_network** will be allowed to initiate connections with clients."
+   },
+   "vpn.server.routing6.allow_private_nets_to_clients":{
+      "2.9.0":"True",
+      "description": "If true, all IPv6 addresses in **vpn.server.routing6.private_network** will be allowed to initiate connections with clients."
+   },
+   "vpn.server.nat":{
+      "2.9.0":"True",
+      "description": "Enable IPv4 NAT (if underlying kernel supports it)."
+   },
+   "vpn.server.nat6":{
+      "2.9.0":"True",
+      "description": "Enable IPv6 NAT (if underlying kernel supports it)."
+   },
+   "vpn.server.nat.masquerade":{
+      "2.9.0":"False",
+      "description": "Enable IPv4 masquerade (if underlying kernel supports it)."
+   },
+   "vpn.server.nat6.masquerade":{
+      "2.9.0":"False",
+      "description": "Enable IPv6 masquerade (if underlying kernel supports it)."
+   },
+   "vpn.server.tls_cc_security":{
+      "2.9.0":"tls-crypt",
+      "description": ["Implements an additional layer of security to the VPN tunnel. The 'tls-auth' option implements a preshared key for signing and verifying control channel packets.", 
+      "The 'tls-crypt' option implements a preshared key for signing, verifying, and encrypting the control channel packets.", 
+      "It is recommended to use tls-crypt, but some older systems may only be compatible with tls-auth or may not even support this at all.",
+       "Please note that changing this option affects all clients and means you will have to reprovision your VPN clients with new configuration profiles.", 
+       "Access Server also supports tls-cryptv2 that supports per client keys for newer clients. With tls-auth and tls-crypt Access Server will run in mixed mode that accepts both tls-cryptv2 and tls-auth/tls-crypt. ",
+       "With the tls-cryptv2 option, Access Server will allow only tls crypt v2 clients."]
+   },
+   "vpn.server.duplicate_cn":{
+      "2.9.0":"true",
+      "description": "Specifies whether to allow multiple concurrent VPN connections for a user (automatically disabled when static VPN IP addresses are configured for users)"
+   },
+   "vpn.server.tls_version_min":{
+      "2.9.0":"1.2",
+      "description": "Minimum TLS version on server side."
+   },
+   "vpn.server.session_ip_lock": {
+      "2.9.0":"false",
+      "description": "Indicates whether to lock session token to the client IP address from which the successful authentication occurred. If true and a client changes its  IP address, the token is no longer valid, so reauthentication must occur)."
+   },
+   "vpn.server.inactive_expire": {
+      "2.9.0":"300",
+      "description": ["If a client disconnects, where the disconnect was not requested by the end user, the session token expiration is reduced to *vpn.server.inactive_expire* seconds from the time of disconnection.",
+      "This is done to allow the session token to survive short-term network outages that trigger disconnect/reconnect cycles. If the client reconnects during this window, the session expiration is restored to",
+      "the original live session expiration time (i.e. 1 day from the point of original authentication). Note that any intra-session connnect/disconnect cycles will never extend the live session expiration period beyond its original value."]
+   },
+   "vpn.tls_refresh.do_reauth":{
+      "2.9.0":"true",
+      "description": "IS NOT USED."
+   },
+   "vpn.tls_refresh.interval":{
+      "2.9.0":"60",
+      "description": "The mid-session TLS renegotiation period"
+   },
+   "openvpn_node_log":{
+      "2.9.0":"/var/log/openvpnas-node.log",
+      "description": "Path for writing failover logs for active node."
+   },
+   "db_receive_enable":{
+      "2.9.0":"true",
+      "description": "Enable use of configuration DBs that have been pushed to us from the partner machine."
+   },
+   "ucarp.vhid":{
+      "2.9.0":"94",
+      "description": ["the UCARP 'vhid' parameter. Set to a unique value between 1 and 255 for each AS primary/secondary pair.", 
+      "Normally, you shouldn't need to modify this value unless you are running two or more AS primary/secondary pairs or other instances of UCARP on the LAN." ]
+   },
+   "ucarp.unit":{
+      "2.9.0":"16",
+      "description": ["Define an explicit unit number to use on the ucarp virtual interface.  Defaults to 16 or the next higher unused value.", 
+      "For example, if eth0 is the primary interface, and 16 is used for the unit number, the virtual interface would be eth0:16"]
+   },
+   "external_pki.remote_cert_usage":{
+      "2.9.0":"eku",
+      "description": "X509 explicit/extended key usage based on RFC3280 TLS rules."
+   },
+   "external_pki.cn_username_requirement":{
+      "2.9.0":"true",
+      "description": "By default, it is required that client logins use a username that matches the Common Name on the client certificate.  This requirement may be dropped by disabling the external_pki.cn_username_requirement"
+   },
+   "external_pki.autologin_x509_spec":{
+      "2.9.0": "role,,AUTOLOGIN",
+      "description": ["The format is following: '<X509 Attribute>,<optional flags>,<enabling substring in attribute value>'. The flags parameter is reserved for future use and is currently unimplemented.",
+         "If is set to 'role,,AUTOLOGIN', then the Access Server would only allow autologin connections from client certificates where the 'role' X509 attribute is present and the substring 'AUTOLOGIN' exists within the 'role' value"]
+   },
+   "vpn.client.client_sockbuf":
+   {
+      "2.9.0":"0",
+      "description": "TCP window or UDP buffer size on client side of VPN transport socket, set to 0 to use system default (default=100000)."
+   },
+   "vpn.client.tcp_pos":{
+      "2.9.0":"2",
+      "description": "When multi-daemon mode is defined with both UDP and TCP servers, this value indicates the position of TCP protocol among all other daemons."
+   },
+   "vpn.client.n_pos":{
+      "2.9.0":"8",
+      "description": "When multi-daemon mode is defined with both UDP and TCP servers, this value indicates the maximum number of attempts to define protocol and its port."
+   },
+   "vpn.client.verb":{
+      "2.9.0":"3",
+      "description": "Specifies the verbosity level (`--verb `) that is put in client profiles."
+   },
+   "vpn.general.server_poll_timeout":{
+      "2.9.0":"4",
+      "description": "Client config timeout option for server polling(--server-poll-timeout client profile option)"
+   },
+   "vpn.general.lzo":{
+      "2.9.0":"false",
+      "description": "Global setting for lzo usage per user basis."
+   },
+   "cws.footer":{
+      "2.9.0":"show",
+      "description": "Indicates whether to show footer on CWS."
+   },
+   "cs.footer":{
+      "2.9.0":"show",
+      "description": "Indicates whether to show footer on UI page."
+   },
+   "vpn.server.crl_resample":{
+      "2.9.0":"10",
+      "description": "Time in number of seconds that CRL file will be automatically reloaded by the server after CRL file update."
+   },
+   "vpn.server.ignore_unknown_crls":{
+      "2.9.0":"false",
+      "description": "Indicates whether to ignore unknown certificates."
+   },
+   "dbpush.resample":{
+      "2.9.0":"5",
+      "description": "Interval to wake up replication system for failover in seconds. "
+   },
+   "dbpush.session_store_push_freq":{
+      "2.9.0":"30",
+      "description": "Frequency for pushing session store in seconds."
+   },
+   "vpn.server.user":{
+      "2.9.0":"nobody",
+      "description": "System user for running web server."
+   },
+   "vpn.server.daemon_balance_factor":{
+      "2.9.0":"3.0",
+      "description": ["The load factor of a given daemon is a function of the number of clients currently connected to it, and the cpu wall time of the daemon.",
+      "The balance_factor is used to normalize n_clients into a cpu-time-comparable value.  The least loaded daemon is considered to be the daemon that minimizes C * BF + B,",
+      "where C is the number of clients, BF is the balance factor, and B is cpu wall time in seconds."]
+   },
+   "vpn.server.cpu_load_balancing_window_size":{
+      "2.13.0": "3600",
+      "description": "The size of cpu load window in seconds. If 0 - then cpu load will be used from the process entire lifetime."
+   },
+   "vpn.client.routing.superuser_c2c_access":{
+      "2.9.0":"false",
+      "description": "Allow VPN users with Administrator privilege to access all VPN client IP addresses."
+   },
+   "sa.net_resample":{
+      "2.9.0":"15",
+      "description": "Interval for local address tracker watcher. In seconds."
+   },
+   "lic.server":{
+      "2.9.0":"licensing.openvpn.net:443",
+      "description": "URL of licensing server."
+   },
+   "sa.unit":{
+      "2.9.0":"0",
+      "description": "The unit number of this particular AS configuration. Normally set to 0.  If you have multiple, independent AS instances running on the same machine, each should have a unique unit number."
+   },
+   "sa.nofile":{
+      "2.9.0":"4096",
+      "description": "Sets hard limit for opened resource number for AS server process"
+   },
+   "sa.show_c2s_routes":{
+      "2.9.0":"false",
+      "description": "Indicates whether to enable client gateway."
+   },
+   "subscription.enforcement_order":{
+      "2.9.0":"newest",
+      "description": "Indicates the policy for disconnecting clients that went over the subscription limit. Allowed values(oldest, newest)."
+   },
+   "subscription.local_cc_limit":{
+      "2.9.0": {
+         "value": "-1",
+         "description": "Default value, which means that no local_cc limit is set."
+      }
+   },
+   "vpn.sso.timeout":{
+      "2.9.0":"300",
+      "description": "Timeout for SSO."
+   },
+   "vpn.sso.enable":{
+      "2.9.0":"False",
+      "description": "Whether to enable SSO."
+   },
+   "vpn.sso.auth_pending":{
+      "2.9.0":"False",
+      "description": "If true, indicates that out-of-band authentication must occur before a connecting client will advance to the **CONNECTED** state and establish a VPN tunnel."
+   },
+   "vpn.sso.override_webimport":{
+      "2.9.0": {
+         "value": "",
+         "description": "If unset clients will use the web based import only if SAML is the default auth method. If set to true, clients will always told to use the web based import and if it is set to false, clients will try to use xmlrpc based import"
+      }
+   },
+   "vpn.server.session_expire":{
+      "2.9.0":{
+         "description": ["We use a timeout just shy of a day since otherwise we have the race condition with default tls-renegotiation of 6h.",
+          "With 4*6h tls-negation just doing the last renegotiation a few seconds before the 24h limit making the session last 30h.", 
+          "Originally DEFAULT_MAX_SESSION = (86400 - 300)"],
+         "value": "86100"
+      }
+   },
+   "auth.module.max_parallel":{
+      "2.9.0":  "8",
+      "description": "Maximum number of concurrent authentication requests."
+   },
+   "vpn.server.group":{
+      "2.9.0":"nobody",
+      "description": "System group for running AS process."
+   },
+   "vpn.server.chroot":{
+      "2.9.0":"true",
+      "description": ["Used to lock OpenVPN Daemon into chroot jail, where the daemon would not be able to access",
+         "any part of the host system's filesystem except for the specific directory given as a parameter to the directive. ",
+         "This is important from a security perspective, because even if an attacker were able to compromise the server ",
+         "with a code insertion exploit, the exploit would be locked out of most of the server's filesystem."]
+   },
+   "vpn.server.verb":{
+      "2.9.0":"3",
+      "description": "Specifies the verbosity level (`--verb `) that the OpenVPN daemons are being run with."
+   },
+   "vpn.server.route_metric":{
+      "2.9.0":"101",
+      "description": "Specify a default metric to use with --route to push to VPN client."
+   },
+   "vpn.server.route_delay":{
+      "2.9.0":"5",
+      "description": "Delay n seconds after connection establishment, before adding routes."
+   },
+   "vpn.server.tun_timeout":{
+      "2.9.0":"30",
+      "description": "Tun timeout in seconds."
+   },
+   "vpn.server.tun_dhcp_cycle":{
+      "2.9.0":"true",
+      "description": "If true then deal with Windows TAP adapter IP assignment via DHCP"
+   },
+   "vpn.server.mssfix":{
+      "2.9.0":"1350",
+      "description": "If you have fragmentation issues or misconfigured routers in the path which block Path MTU discovery, lower the TCP MSS and internally fragment non-TCP."
+   },
+   "vpn.server.keepalive_ping":{
+      "2.9.0":"12",
+      "description": "OpenVPN will ping its peer once every **vpn.server.keepalive_ping seconds** "
+   },
+   "vpn.server.keepalive_timeout":{
+      "2.9.0":"50",
+      "description": ["If ater openvpn pings its peers and no response is received within  **vpn.server.keepalive_timeout** seconds, the connection will be presumed down.",
+      "On the client side, this will trigger a reconnect attempt. On the server side it will cause a deletion of the client instance object after 2 times the **vpn.server.keepalive_timeout**",
+      "number of seconds have elapsed."]
+   },
+   "vpn.server.hash_size":{
+      "2.9.0":"4096",
+      "description": "Overrides the default hash table size for OpenVPN’s internal routing table (--hash-size)."
+   },
+   "vpn.server.max_clients":{
+      "2.9.0":"2048",
+      "description": "Number of maximum concurrent client session and connection attempts per OpenVPN instance. (--max-clients)"
+   },
+   "vpn.server.server_sockbuf":{
+      "2.9.0":"0",
+      "description": "TCP window or UDP buffer size on server side of VPN transport socket, set to 0 to use system"
+   },
+   "vpn.server.txqueuelen":{
+      "2.9.0":"200",
+      "description": "Set the TX queue length on the TUN/TAP interface (--txqueuelen)."
+   },
+   "vpn.server.tcp_nodelay":{
+      "2.9.0":"true",
+      "description": "Instructs server and client to use TCP_NODELAY on TCP VPN connection (--tcp-nodelay)"
+   },
+   "vpn.server.fast_io":{
+      "2.9.0":"true",
+      "description": "Enables fast io option in OpenVPN daemons (--fast-io)."
+   },
+   "vpn.server.session_monitor":{
+      "2.9.0":"300",
+      "description": "Interval for flushing log object in server agent."
+   },
+   "vpn.server.user_ci":{
+      "2.9.0":"False",
+      "description": "Indicate whether to allow case-insensitive username comparison between client username and DB or cert"
+   },
+   "sa.session_expire":{
+      "2.9.0":"1800",
+      "description": "Specifies interval for timing out web session after n seconds of inactivity."
+   },
+   "sa.mbedtls_debug_level":{
+      "2.9.0":"0",
+      "description": "IS NOT USED."
+   },
+   "cs.web_server_name":{
+      "2.9.0":"OpenVPN-AS",
+      "description": "You can configure the 'Server' header that the AS web server uses to identify itself to clients"
+   },
+   "capi.config_dir":{
+      "2.9.0":"..",
+      "description": "IS NOT USED."
+   },
+   "vpn.server.lockout_policy.n_fails":{
+      "2.9.0":"5",
+      "description": "Number of failures after which user will be locked out."
+   },
+   "vpn.server.lockout_policy.reset_time":{
+      "2.9.0":"900",
+      "description": "Reenable locked out users after this time period"
+   },
+   "vpn.server.lockout_policy.max_history":{
+      "2.9.0":"10000",
+      "description": "Maximum size of lockout dictionary. If dictionary exceeds this size, it will be purged."
+   },
+   "sa.dyn_port":{
+      "2.9.0": [["904", "909"], ["914", "942"], ["944", "988"]],
+      "description": "Allocate a set of temporary ports."
+   },
+   "system_users_local":{
+      "2.9.0": ["root"],
+      "description": "Local users allowed to connect to Server Agent socket."
+   },
+   "iptables.web":{
+      "2.9.0":"True",
+      "description": "If true, open up web ports on the firewall using iptables."
+   },
+   "API_TRACE_SA":{
+      "2.9.0":"0",
+      "description": "Whether to trace XMLRPC calls."
+   },
+   "obfuscate_certs":{
+      "2.9.0":"false",
+      "description": ["Control if automatic certificate generation should use a common name of :code:`client_{serial_number}` instead of the normal username as common name. ",
+      "This can be used to avoid leaking the information of the client username in a TLS 1.0 - TLS 1.2 handshake. If only visibility of client certificate common name in the TLS",
+      "handshake is considered an issue, it is recommended to enforce a minimum TLS level of 1.3 instead of using",
+      "this setting as TLS 1.3 encrypts the client certificate in the handshake."]
+   },
+   "log_verbose":{
+      "2.9.0":"false",
+      "description": "Specifies verbosity of the log."
+   },
+   "log_process":{
+      "2.9.0":"True",
+      "description": "Indicates whether to move log DB operations to another process."
+   },
+   "local_root_granted_admin":{
+      "2.9.0":"True",
+      "description": "If true then [auth-options] can be omitted as long as the sacli caller is root."
+   },
+   "node_type":
+   {
+      "2.9.0":"PRIMARY",
+      "description": "Type of the node for failover (PRIMAR|SECONDARY)"
+   },
+   "vpn.server.enable_cipher_fallback":
+   {
+      "2.9.0":"false",
+      "description": "Support legacy clients that do not announce ciphers. This affects only 'OpenVPN 2.3.x clients (or older) that are compiled with --enable-small"
+   },
+   "xmlrpc.relay_level":
+   {
+      "2.9.0": "1",
+      "description": [
+         "The Access Server can be configured for remote management via an XML-RPC  over HTTPS web services API. By default the full web services API is not exposed to the internet. ",
+         "number of seconds have elapsed. Allowed values (0 - disable the API, 1 - enable only minimal subset required by the client, 2 - fully enable"]
+   },
+   "auth.saml.0.enable":
+   {
+      "2.9.0": "false",
+      "description": "Indicates whether to enable SAML authentication."
+   },
+   "cs.cws_ui_offer.win_v3":
+   {
+      "2.9.0": "true",
+      "description": "Control the visibility of links provided to Client Web Server users for OpenVPN Connect v3 for Windows."
+   },
+   "cs.cws_ui_offer.mac_v3":
+   {
+      "2.9.0": "true",
+      "description": "Control the visibility of links provided to Client Web Server users for OpenVPN Connect v3 for Mac OS X"
+   },
+   "cs.cws_ui_offer.win":
+   {
+      "2.9.0": "true",
+      "2.12.0": "false",
+      "description": "Control the visibility of links provided to Client Web Server users for OpenVPN Connect v2 for Windows."
+   },
+   "cs.cws_ui_offer.mac":
+   {
+      "2.9.0": "true",
+      "2.12.0": "false",
+      "description": "Control the visibility of links provided to Client Web Server users for OpenVPN Connect v2 for Mac OS X"
+   },
+   "cs.cws_ui_offer.ios":
+   {
+      "2.9.0": "true",
+      "description": "Control the visibility of links provided to Client Web Server users for OpenVPN Connect for iOS"
+   },
+   "cs.cws_ui_offer.android":
+   {
+      "2.9.0": "true",
+      "description": "Control the visibility of links provided to Client Web Server users for OpenVPN Connect for Android"
+   },
+   "cs.cws_ui_offer.linux":
+   {
+      "2.9.0": "true",
+      "description": "Control the visibility of links provided to Client Web Server users for OpenVPN Connect for Linux"
+   },
+   "cs.cws_ui_offer.server_locked":
+   {
+      "2.9.0": "false",
+      "description": "Control the visibility of links provided to Client Web Server users for server-locked profiles."
+   },
+   "cs.cws_ui_offer.user_locked":
+   {
+      "2.9.0": "true",
+      "description": "Control the visibility of links provided to Client Web Server users for user-locked profiles."
+   },
+   "cs.cws_ui_offer.autologin":
+   {
+      "2.9.0": "true",
+      "description": "Control the visibility of links provided to Client Web Server users for autologin profiles."
+   },
+   "cs.cws.pwd_change":
+   {
+      "2.9.0": "true",
+      "description": "Allow local users to change password"
+   },
+   "auth.radius.0.auth_method":
+   {
+      "2.9.0": "pap",
+      "description": "The connection to the RADIUS Server is authenticated via this method."
+   },
+   "auth.ldap.0.users_base_dn":
+   {
+      "2.9.0": "CN=Users, DC=example, DC=net",
+      "description": "Base DN for LDAP configs"
+   },
+   "auth.ldap.0.uname_attr":
+   {
+      "2.9.0": "sAMAccountName",
+      "description": "LDAP attribute used to denote the username of the account."
+   },
+   "auth.saml.0.timeout":
+   {
+      "2.9.0": 180,
+      "description": "Timeout for the auth pending request during the VPN  authentication. The time the VPN waits for the user to complete the web based authentication."
+   },
+   "auth.saml.0.requestauthncontext":
+   {
+      "2.9.0": "true",
+      "description": "Flag to make AS request the AuthnContext to be a specific value. This defaults to true and makes AS request to include an AuthContext section in the AuthNRequest."
+   },
+   "auth.saml.0.forceauthn":
+   {
+      "2.9.0": "false",
+      "description": "Flag to indicate that ForceAuthn should be included in AuthNRequest. If this flags is true, AS will include `ForceAuthn='true'` in the AuthNRequest made to the IdP.  The default is to not include this flag."
+   },
+   "auth.saml.0.authncontexts":
+   {
+      "2.9.0": "PasswordProtectedTransport",
+      "description": ["List of AuthnContext values to request from access server ",
+      "This is a space separated list of AuthnContext to request. If the values include an : they will",
+      "be send as is (e.g. `urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport`). If the",
+      "value does not include an :, the string `urn:oasis:names:tc:SAML:2.0:ac:classes:` will be prepended to it.",
+      "For example `PasswordProtectedTransport urn:oasis:names:tc:SAML:2.0:ac:classes:Smartcard` would",
+      "request PasswordProtectedTransport and Smartcard login classes."]
+   },
+   "host.name" : {
+      "description": "Hostname for Access Server (IP address or hostname)"
+   },
+   "ucarp.addr": {
+      "description": "Ucarp virtual address."
+   },
+   "ucarp.secret": {
+      "description": "Shared secret for accessing host via ucarp."
+   },
+   "dbpush.hosts.0.enable": {
+      "2.9.0": "true",
+      "description": "Enable primary node for failover mode."
+   },
+   "dbpush.hosts.0.public": {
+      "description": "DNS name or IP address for primary node in failover mode."
+   },
+   "dbpush.hosts.0.internal": {
+      "2.9.0": "PRIMARY",
+      "description": "The value according to the output of the \"hostname\" command on the primary node. Must be different from hostname on secondary node."
+   },
+   "dbpush.hosts.0.username": {
+      "2.9.0": "root",
+      "description": "SSH username to connect to primary node."
+   },
+   "dbpush.hosts.0.password": {
+      "description": "SSH password to connect to primary node (optional)."
+   },
+   "dbpush.hosts.0.ssh_port": {
+      "2.9.0": "22",
+      "description": "SSH port to connect to primary node."
+   },
+   "dbpush.hosts.1.enable": {
+      "2.9.0": "true",
+      "description": "Enable secondary node for failover mode."
+   },
+   "dbpush.hosts.1.public": {
+      "description": "DNS name or IP address for secondary node in failover mode."
+   },
+   "dbpush.hosts.1.internal": {
+      "2.9.0": "SECONDARY",
+      "description": "The value according to the output of the \"hostname\" command on the secondary node. Must be different from hostname on primary node."
+   },
+   "dbpush.hosts.1.username": {
+      "2.9.0": "root",
+      "description": "SSH username to connect to secondary node."
+   },
+   "dbpush.hosts.1.password": {
+      "description": "SSH password to connect to secondary node (optional)."
+   },
+   "dbpush.hosts.1.ssh_port": {
+      "2.9.0": "22",
+      "description": "SSH port to connect to secondary node."
+   },
+   "external_pki.auth_token_key": {
+      "description": "Secret used for auth-token generation when Access Server is running in external PKI mode."
+   },
+   "external_pki.ta_key": {
+      "description": "tls-crypt/tls-auth key to use when Access Server is running in external PKI mode."
+   },
+   "external_pki.server_crt": {
+      "description": "Server certificate to use when Access Server is running in external PKI mode."
+   },
+   "external_pki.server_key": {
+      "description": "Server private key for external PKI functionality"
+   },
+   "external_pki.dh_pem": {
+      "description": "DH parameters for external PKI functionality"
+   },
+   "external_pki.tls_cryptv2_server": {
+      "description": "tls_cryptv2_server for external PKI functionality"
+   },
+   "external_pki.ca_crt": {
+      "description": "CA certificate when Access Server is running in external PKI mode."
+   },
+   "external_pki.server_ca_crt": {
+      "description": "Server CA when Access Server is running in external PKI split mode"
+   },
+   "external_pki.client_ca_crt": {
+      "description": "Client CA when Access Server is running in external PKI split mode"
+   },
+   "cs.group": {
+      "description": "OS group for running web server"
+   },
+   "sa.sock": {
+      "description": "Auth proxy unix socket. Access Server uses it to communicate with sacli tool."
+   },
+   "general.sock_dir": {
+      "description": "Socket directory"
+   },
+   "cs.ca_bundle": {
+      "description": "CA bundle for web server."
+   },
+   "cs.priv_key": {
+      "description": "Private key for web server."
+   },
+   "cs.cert": {
+      "description": "Certificate for web server."
+   },
+   "cs.user": {
+      "description": "OS user for running web server."
+   },
+   "certs_db": {
+      "description": "URI to certs DB(SQLite or MySQL)"
+   },
+   "config_db": {
+      "description": "URI to config DB(SQLite or MySQL)"
+   },
+   "config_db_local": {
+      "description": "URI to local config DB(SQLite)"
+   },
+   "cluster_db": {
+      "description": "URI to cluster DB(MySQL)"
+   },
+   "notification_db": {
+      "description": "URI to notifications DB(SQLite or MySQL)"
+   },
+   "log_db": {
+      "description": "URI to logs DB(SQLite or MySQL)"
+   },
+   "user_prop_db": {
+      "description": "URI to user properties DB(SQLite or MySQL)"
+   },
+   "db_receive_dir": {
+      "description": "Dir that will be scanned for DB dumps."
+   },
+   "db_startup_wait": {
+      "description": "On startup, wait up to n seconds for DB files to become available if they do not yet exist.  This is generally only useful on secondary nodes used for standby purposes."
+   },
+   "failover.mode": {
+      "2.9.0": "none",
+      "description": "Mode for the failover configuration. Can be 'none' or 'ucarp'"
+   },
+   "vpn.client.app_verify": {
+      "description": "Verify that client apps are up to date."
+   },
+   "vpn.client.connect_timeout": {
+      "description": "Connect timeout for the client"
+   },
+   "vpn.client.no_web": {
+      "description": "If true, OpenVPN Connect will not assume that the AS for this profile is reachable via web or XML-RPC API"
+   },
+   "vpn.client.host_field": {
+      "description": "If true, auth dialog will include a host field that allows the OpenVPN server host to be overriden by the user"
+   },
+   "vpn.client.trust_group": {
+      "description": "Boolean client settings."
+   },
+   "vpn.client.restrict_domain": {
+      "description": "Restrict the client from connecting to any VPN profile except those that are signed by specified value."
+   },
+   "vpn.client.exec_user_domain": {
+      "description": "Specify in client installer settings to control which domains are allowed to push user-level scripts."
+   },
+   "vpn.client.exec_admin_domain": {
+      "description": "Specify in client installer settings to control which domains are allowed to push admin-level scripts."
+   },
+   "vpn.client.auth_domain": {
+      "description": "Domain suffix such as '@example.com' that is displayed to the right of the username field in the auth dialog"
+   },
+   "auth.callback.mutex_timeout_seconds": {
+      "2.9.0": {
+         "value": "600",
+         "description": "The longest time `ServerAgentAuth.auth_callback` can wait on the mutex in the critical section until it is forcefully released, so that in unexpected edge cases we don't hold onto system resources forever."
+      }
+   },
+   "lic.dir": {
+      "description": "Path for storing license information."
+   },
+   "sa.company_name": {
+      "description": "The company name will be shown in the UI."
+   },
+   "sa.logo_image_file": {
+      "description": "Logo image file path."
+   },
+   "sa.logo_icon_file": {
+      "description": "Logo icon file path."
+   },
+   "vpn.server.data_ciphers": {
+      "description": ["This colon separated list contains the allowed data channel ciphers with decreasing priority. OpenVPN Access Server chooses the first cipher from this list that the client announces as supported. This list should always include at least AES-128-GCM or AES-256-GCM to avoid compatibility problems.",
+      "Valid ciphers include AES-256-GCM, AES-128-GCM, Chacha20-Poly1305, AES-128-CBC, AES-256-CBC and BF-CBC (deprecated). The AEAD ciphers (AES-GCM and Chacha20-Poly1305) are the preferred modern ciphers for speed and security. Only AEAD ciphers are supported with data channel offloading."]
+   },
+   "vpn.server.config_text": {
+      "description": "User-defined VPN daemon config text as multi-line string"
+   },
+   "vpn.server.crl": {
+      "description": "CRL server file."
+   },
+   "subscription.bundle": {
+      "description": "Subscription bundle."
+   },
+   "vpn.client.tls_version_min": {
+      "description": "Minimum TLS version on client side."
+   },
+   "vpn.client.tls_version_min_strict": {
+      "description": "If true, the client will voluntarily refuse the connection if its underlying SSL implementation doesn't support the given version."
+   },
+   "subscription.saved_state": {
+      "description": "Encrypted json that holds information about subscription saved state"
+   },
+   "vpn.sso.mode": {
+      "description": "IS NOT USED."
+   },
+   "vpn.sso.redirect_url_template": {
+      "description": "IS NOT USED."
+   },
+   "cluster.mode": {
+      "2.9.0": {
+         "value": "False",
+         "description": "Whether clustering is on or off."
+      }
+   },
+   "node.name": {
+      "description": "Name of the current node in the cluster configuration."
+   },
+   "general.openvpn_exe_path": {
+      "description": "Path to linux openvpn executable."
+   },
+   "vpn.client.routing6.reroute_gw": {
+      "description": "Indicates whether IPv6 client traffic should be routed by default through the VPN."
+   },
+   "sa.win_exe_dir": {
+      "description": "Source directory for OpenVPN Windows executable."
+   },
+   "sa.exe_dir_v2": {
+      "description": "Path to v2 Windows installers."
+   },
+   "sa.exe_dir_v3": {
+      "description": "Path to v3 Windows installers."
+   },
+   "auth.module.post_auth_script": {
+      "description": "Python script that will be executted after users login. (e.g. to modify some user properties)"
+   },
+   "xmlrpc.https.ip_address": {
+      "description": "IP address for XML_RPC API."
+   },
+   "vpn.routing6.enable": {
+      "description": "Indicates whether enable IPv6."
+   },
+   "sa.auth_cache_period": {
+      "description": "Cache auth module results period. If 0, auth results will not be cached."
+   },
+   "cs.host.name": {
+      "description": "Web-server hostname."
+   },
+   "profile.sign.ca_bundle": {
+      "description": "Use different CA bundle for signing profiles instead of VPN one."
+   },
+   "profile.sign.cert": {
+      "description": "Use different certificate for signing profiles instead of VPN one."
+   },
+   "profile.sign.priv_key": {
+      "description": "Use different private key for signing profiles instead of VPN one."
+   },
+   "cs.is_openvpn_web_ca": {
+      "description": "If set to an integer, the ovpn profile will include # OVPN_ACCESS_SERVER_IS_OPENVPN_WEB_CA=x."
+   },
+   "xmlrpc.https.port": {
+      "description": "Port for XML_RPC API."
+   },
+   "profile.friendly_name": {
+      "description": "Add a friendly name to an ovpn profile # OVPN_FRIENDLY_PROFILE_NAME=name that the client app will see instead of the default username@domain for the profile."
+   },
+   "vpn.server.web_sso.url_template": {
+      "description": "IS NOT USED."
+   },
+   "vpn.client.config_text": {
+      "description": "User-defined VPN config text added to client ovpn profiles."
+   },
+   "vpn.server.server_sockbuf_udp": {
+      "description": "UDP buffer size on server side of VPN transport socket, set to 0 to use system default."
+   },
+   "vpn.server.server_sockbuf_tcp": {
+      "description": "TCP window size on server side of VPN transport socket, set to 0 to use system default."
+   },
+   "vpn.server.bridge_iface": {
+      "description": "Bridge interface."
+   },
+   "vpn.server.foreign_bridge": {
+      "description": "Linux bridge name."
+   },   
+   "cs.openssl_ciphersuites": {
+      "description": "Define a custom ciphersuite string to control ciphersuites offered by the web server. The default for this setting is DEFAULT:!EXP:!LOW:!MEDIUM:!kDH:!kECDH:!DSS:!PSK:!SRP:!kRSA to only support secure cipher suites that support perfect forward secrecy. Change only if you have specific requirements."
+   },
+   "cs.ca_key": {
+      "description": "CA key for web-server."
+   },
+   "iptables.append": {
+      "description": "If true, makes Access Server to add iptables rules after existing ones (append instead of prepend)."
+   },
+   "vpn.routing.allow_mcast": {
+      "description": "Whether to allow multicast on 224.0.0.0/240.0.0.0 and IGMP."
+   },
+   "vpn.server.custom_snat_chain": {
+      "description": "Define a custom ip6tables chain to handle all outgoing NAT."
+   },
+   "ssl_api.enable": {
+      "2.9.0": "True",
+      "description": "Whether to enable IPTables service."
+   },
+   "mysql_pref_file": {
+      "description": "MySQL configuration file."
+   },
+   "ucarp.extra_parms": {
+      "description": "Extra parameters for the Ucarp failover node."
+   },
+   "cs.http_headers.0": {
+      "description": "The list of additional custom headers, that can be added to each web server reply."
+   },
+   "ssl_api.openssl_ciphersuites": {
+      "description": "Define a custom ciphersuite string to control ciphersuites offered by the web server. The default for this setting is DEFAULT:!EXP:!LOW:!MEDIUM:!kDH:!kECDH:!DSS:!PSK:!SRP:!kRSA to only support secure cipher suites that support perfect forward secrecy. Change only if you have specific requirements."
+   },
+   "ssl_api.tls_version_min": {
+      "description": "The minimum TLS version."
+   },
+   "ssl_api.local_addr": {
+      "2.9.0": "all",
+      "description": "Local address for clustering."
+   },
+   "ssl_api.local_port": {
+      "2.9.0": 945,
+      "description": "Local port for clustering."
+   },
+   "ssl_api.require_client_cert": {
+      "2.9.0": "True",
+      "description": "Whether to require client certificate."
+   },
+   "vpn.server.port_share.ip_address": {
+      "description": "IP string for ip address. Required if service == 'custom'"
+   },
+   "auth.ldap.0.enable": {
+      "2.9.0": "False",
+      "description": "Disables or enables authorization via LDAP. By default it is not enabled, since the local is the default auth method."
+   },
+   "auth.radius.0.enable": {
+      "2.9.0": "False",
+      "description": "Disables or enables authorization via RADIUS. By default it is not enabled, since the local is the default auth method."
+   },
+   "vpn.server.port_share.port": {
+      "description": "Port for port share. Required if service equals 'custom'"
+   },
+   "auth.radius.0.server.0.host": {
+      "description": "Host for accessing RADIUS server."
+   },
+   "auth.radius.0.server.0.secret": {
+      "description": "Password for accessing RADIUS server."
+   },
+   "auth.radius.0.server.0.auth_port": {
+      "description": "Authorization port for Radius server. Normally it is 1812."
+   },
+   "auth.radius.0.server.0.acct_port": {
+      "description": "Accounting port for Radius server, Normally it is 1813."
+   },
+   "auth.radius.0.per_server_retries": {
+      "description": "How many connection attempts on a given RADIUS server before failing over to the next server."
+   },
+   "auth.radius.0.per_server_timeout": {
+      "description": "How many seconds between connection attempts on the same RADIUS server."
+   },
+   "auth.radius.0.case_sensitive": {
+      "2.9.0": "False",
+      "description": "Indicates whether Radius performs check in regards to the case sensitivity."
+   },
+   "auth.ldap.0.server.0.host": {
+      "description": "LDAP server that will be used for the user checks during the authorization."
+   },
+   "auth.ldap.0.bind_dn": {
+      "description": "Distinguished name describing LDAP account that Access Server will bind to, normally an Administrator account"
+   },
+   "auth.ldap.0.bind_pw": {
+      "description": "The password for the distingushed LDAP account."
+   },
+   "auth.ldap.0.add_req": {
+      "description": "LDAP additional requirements config key. Could be used for narrowing the search in the LDAP directory."
+   },
+   "auth.ldap.0.referrals": {
+      "description": "Corresponds to ldap3.Connection auto_referrals setting -- determines whether ldap3 should implicitly chase referrals or not (0: don't follow, 1: follow)."
+   },
+   "auth.ldap.0.ssl_ca_cert": {
+      "description": "Corresponds to the ldap3.Tls 'ca_certs_file' setting. Specifies a CA certificate bundle to use for validating the LDAP server certificate."
+   },
+   "auth.ldap.0.debug_level": {
+      "description": [ "Corresponds to the ldap3 logging detail level setting and may be one of the following: (0:OFF, 10: ERROR, 20: BASIC, 30: PROTOCOL, 40: NETWORK, 50: EXTENDED). ",
+      "Sensitive data (as user password and SASL credentials) are stripped by default from the log and substituted with a string of ‘*’ (with the same ",
+      "length of the original value) or by a “<stripped xxx characters of sensitive data>” message (where xxx is the number of characters stripped). "]
+   },
+   "auth.ldap.0.case_sensitive": {
+      "2.9.0": "False",
+      "description": "Indicates whether LDAP performs check in regards to the case sensitivity."
+   },
+   "auth.saml.0.idp_entityid": {
+      "description": "Identity of the IdP. Normally has the the form of a URL."
+   },
+   "auth.saml.0.idp_signon_endpoint": {
+      "description": "The sign-on endpoint on the IdP side where SAML requests are posted."
+   },
+   "auth.saml.0.sp_hostname": {
+      "description": ["Hostname used for AS in the SAML assertions and AuthNRequest, normally identical to host.name. This hostname becomes the part of SP identity and therefore also part of the AuthNRequest and Assertion. ",
+       "Changing or setting this wrong will make SAML authentication fail."]
+   },
+   "vpn.server.daemon.vpn_network6": {
+      "description": "Default IPv6 VPN subnets to be subdivided among OpenVPN daemons and used by clients as a VPN routing gateway, and allocated to non-group clients."
+   },
+   "ip6tables.vpn.disable.filter": {
+      "2.9.0": "False",
+      "description": "Disable filter modification of iptables6 tables."
+   },
+   "ip6tables.vpn.disable.mangle": {
+      "2.9.0": "False",
+      "description": "Disable mangle modification of iptables6 tables."
+   },
+   "vpn.server.routing6.incoming_network": {
+      "description": "IPv6 addresses within this range may initiate connections with VPN clients"
+   },
+   "vpn.server.routing6.vpn_supernet": {
+      "description": "Supernets that partially or fully encompass VPN subnets (not generally used)."
+   },
+   "vpn.server.group_pool6": {
+      "description": "Optional pool of VPN IPv6 addresses to be subdivided across groups that don't define group_subnets6/group_range6"
+   },
+   "vpn.server.routing6.snat_source": {
+      "description": "List of SNAT spec strings. A range is given for each outgoing interface so AS NAT outgoing packets."
+   },
+   "vpn.server.custom_snat6_chain": {
+      "description": "Define a custom ip6tables chain to handle all outgoing NAT."
+   },
+   "vpn.server.routing.snat_source.0": {
+      "description": ["When NAT is enabled in the Access Server, the source address used to NAT client packets out of the server can be controlled. By default the ",
+      "primary source IP address of the outgoing interface will be used, however this can be overriden using this key."]
+   },
+   "iptables.vpn.disable.filter": {
+      "2.9.0": "False",
+      "description": "Disable filter modification of iptables tables."
+   },
+   "ssl_api.enable_iptables": {
+      "2.9.0": "True",
+      "description": "Whether to enable ip tables in cluster mode."
+   },
+   "vpn.server.dhcp_option.disable_nbt": {
+      "2.9.0": "False",
+      "description": "Whether to disable NBT for DHCP."
+   },
+   "vpn.server.dhcp_option.nbt": {
+      "2.9.0": "1",
+      "description": "Indicates NetBIOS type. Possible values (1, 2, 4, 8)."
+   }
+
+}
+
+

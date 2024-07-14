@@ -1,0 +1,11 @@
+SQLAlchemy
+arrow
+cryptography
+defusedxml
+ldap3
+ovpn3
+pyOpenSSL
+pyovpnc
+pyrad
+python3-saml
+twisted
